@@ -2,6 +2,7 @@ import { baseUrl } from "../../backend/baseUrl.js";
 
 let form = document.getElementById("form");
 form.addEventListener("submit", function () {
+    event.preventDefault()
     // alert("Login Successful")
     let email = form.email.value;
     let password = form.password.value;
@@ -13,7 +14,12 @@ form.addEventListener("submit", function () {
     
     // Email: user@empher.com
     // Password: user@123
-
+    fetch (`${baseUrl}/books`)
+   .then((res)=> res.json())
+   .then((data)=>{
+  
+   function getData(){
+    let data =[]
     if (email == "admin@empher.com" || "user@empher.com") {
         
         
@@ -26,7 +32,7 @@ form.addEventListener("submit", function () {
                 alert("Login Successful");
                 window.location.href = "books.html"
             }
-            localStorage.setItem("loginData", JSON.stringify)
+            localStorage.setItem("loginData", JSON.stringify(data))
 
         } else {
             alert("Please enter correct password")
@@ -34,6 +40,13 @@ form.addEventListener("submit", function () {
     } else {
         alert(" Login Failed.. Please enter correct password...")
     }
+}
+})
+.catch((err)=>{
+    console.log(err)
+})
+
 
 
 })
+getData()
