@@ -46,7 +46,4 @@ form.addEventListener("submit", function () {
     console.log(err)
 })
 
-
-
 })
-getData()
