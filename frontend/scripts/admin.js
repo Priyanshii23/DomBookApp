@@ -1,7 +1,11 @@
 import { baseUrl } from "../../backend/baseUrl.js";
 
-// let loginData = JSON.parse(localStorage.getItem("loginData"))
-// console.log(loginData)
+let loginData = JSON.parse(localStorage.getItem("loginData"))
+console.log(loginData)
+if(email!= "admin@empher.com"){
+    alert("Admin not logged in")
+    window.location.href = "index.html"
+}
 
 let admin_form = document.getElementById("admin")
 admin_form.addEventListener("submit", async function () {
