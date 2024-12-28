@@ -15,8 +15,6 @@ admin_form.addEventListener("submit", async function () {
     let category = admin_form.category.value;
 
     let book = { title, author, category }
-
-
     try {
 
         await fetch(`${baseUrl}/books`, {
