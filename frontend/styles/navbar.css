@@ -1,0 +1,15 @@
+#nav{
+    background-color: teal;
+    display: flex;
+    justify-content: space-evenly;
+}
+#nav>a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: larger;
+
+}
+#nav>a:hover{
+    cursor: pointer;
+    color: aqua;
+}

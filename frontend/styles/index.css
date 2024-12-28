@@ -1,0 +1,13 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* width: 30rem; */
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    /* align-items: center; */
+    color: rgb(6, 70, 70);
+    text-align: center;
+}
